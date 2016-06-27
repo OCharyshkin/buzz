@@ -1,6 +1,11 @@
+dependencies:
+  override:
+    - npm install
+
 deployment:
   staging:
     branch: master
     heroku:
       appname: buzz-13
-
+      commands:
+        - npm start
