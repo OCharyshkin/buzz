@@ -4,5 +4,6 @@ dependencies:
 
 deployment:
   staging:
+    branch: master
     commands:
       - npm start
