@@ -9,7 +9,7 @@ var _ = require('underscore');
 var databaseUri = process.env.DATABASE_URI;
 
 var port = process.env.PORT;
-var serverUrl = process.env.SERVER_URL || 'http://localhost';
+var serverUrl = process.env.SERVER_URL;
 
 var api = new ParseServer({
   databaseURI: databaseUri,
