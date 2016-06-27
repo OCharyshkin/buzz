@@ -18,9 +18,15 @@
     "underscore": "1.8.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "./node_modules/.bin/mocha --require should --reporter spec tests/main.js"
   },
   "engines": {
     "node": ">=4.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "should": "^9.0.2",
+    "supertest": "^1.2.0"
   }
 }
