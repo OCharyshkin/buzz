@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="<%= description %>">
+
+    <meta property="og:title" content="<%= title %>"/>
+    <meta property="og:description" content="<%= description %>"/>
+    <meta property="og:type" content="music.song" />
+    <meta property="og:url" content="<%= absoluteUrl %>"/>
+    <meta property="og:audio" content="<%= recordUrl %>"/>
+    <meta property="og:image" content="<%= pic %>"/>
+    <meta property="og:site_name" content="Buzz"/>
+    <meta property="fb:app_id" content="874455285995225"/>
+
+    <meta property="og:audio:type" content="audio/vnd.facebook.bridge" />
+    <meta property="music:duration" content="<%= duration %>" />
+    <meta property="music:preview_url:type" content="audio/mpeg" />
+    <meta property="music:preview_url" content="<%= recordUrl %>">
+    <!-- <meta property="music:preview_url:secure_url" content="<%= recordUrl %>">
+ -->
+    <!-- <meta property="music:release_date" content="<%= date %>">      -->
+    <meta property="music:song" content="<%= recordUrl %>">
+    <meta property="music:song:disc" content="1">
+    <meta property="music:song:track" content="2">
+
+
+    <meta property="og:restrictions:country:allowed" content="AD" />
+    <meta property="og:restrictions:country:allowed" content="AR" />
+    <meta property="og:restrictions:country:allowed" content="AT" />
+    <meta property="og:restrictions:country:allowed" content="AU" />
+    <meta property="og:restrictions:country:allowed" content="BE" />
+    <meta property="og:restrictions:country:allowed" content="BG" />
+    <meta property="og:restrictions:country:allowed" content="BO" />
+    <meta property="og:restrictions:country:allowed" content="BR" />
+    <meta property="og:restrictions:country:allowed" content="CA" />
+    <meta property="og:restrictions:country:allowed" content="CH" />
+    <meta property="og:restrictions:country:allowed" content="CL" />
+    <meta property="og:restrictions:country:allowed" content="CO" />
+    <meta property="og:restrictions:country:allowed" content="CR" />
+    <meta property="og:restrictions:country:allowed" content="CY" />
+    <meta property="og:restrictions:country:allowed" content="CZ" />
+    <meta property="og:restrictions:country:allowed" content="DE" />
+    <meta property="og:restrictions:country:allowed" content="DK" />
+    <meta property="og:restrictions:country:allowed" content="DO" />
+    <meta property="og:restrictions:country:allowed" content="EC" />
+    <meta property="og:restrictions:country:allowed" content="EE" />
+    <meta property="og:restrictions:country:allowed" content="ES" />
+    <meta property="og:restrictions:country:allowed" content="FI" />
+    <meta property="og:restrictions:country:allowed" content="FR" />
+    <meta property="og:restrictions:country:allowed" content="GB" />
+    <meta property="og:restrictions:country:allowed" content="GR" />
+    <meta property="og:restrictions:country:allowed" content="GT" />
+    <meta property="og:restrictions:country:allowed" content="HK" />
+    <meta property="og:restrictions:country:allowed" content="HN" />
+    <meta property="og:restrictions:country:allowed" content="HU" />
+    <meta property="og:restrictions:country:allowed" content="IE" />
+    <meta property="og:restrictions:country:allowed" content="IS" />
+    <meta property="og:restrictions:country:allowed" content="IT" />
+    <meta property="og:restrictions:country:allowed" content="LI" />
+    <meta property="og:restrictions:country:allowed" content="LT" />
+    <meta property="og:restrictions:country:allowed" content="LU" />
+    <meta property="og:restrictions:country:allowed" content="LV" />
+    <meta property="og:restrictions:country:allowed" content="MC" />
+    <meta property="og:restrictions:country:allowed" content="MT" />
+    <meta property="og:restrictions:country:allowed" content="MX" />
+    <meta property="og:restrictions:country:allowed" content="MY" />
+    <meta property="og:restrictions:country:allowed" content="NI" />
+    <meta property="og:restrictions:country:allowed" content="NL" />
+    <meta property="og:restrictions:country:allowed" content="NO" />
+    <meta property="og:restrictions:country:allowed" content="NZ" />
+    <meta property="og:restrictions:country:allowed" content="PA" />
+    <meta property="og:restrictions:country:allowed" content="PE" />
+    <meta property="og:restrictions:country:allowed" content="PH" />
+    <meta property="og:restrictions:country:allowed" content="PL" />
+    <meta property="og:restrictions:country:allowed" content="PT" />
+    <meta property="og:restrictions:country:allowed" content="PY" />
+    <meta property="og:restrictions:country:allowed" content="SE" />
+    <meta property="og:restrictions:country:allowed" content="SG" />
+    <meta property="og:restrictions:country:allowed" content="SK" />
+    <meta property="og:restrictions:country:allowed" content="SV" />
+    <meta property="og:restrictions:country:allowed" content="TR" />
+    <meta property="og:restrictions:country:allowed" content="TW" />
+    <meta property="og:restrictions:country:allowed" content="US" />
+    <meta property="og:restrictions:country:allowed" content="UY" />
+
+
+    <link rel="stylesheet" href="vendors/APlayer/dist/APlayer.min.css">
+    <link rel="stylesheet" href="vendors/social/dist/widget.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.parsecdn.com/js/parse-latest.js"></script>
+
+</head>
+<body>
+<div id="container">
+    <div class="container">
+        <div class="section">
+            <div id="player" class="aplayer"></div>
+        </div>
+        <div class="section center">
+            <div class="case case-large">
+                <div class="social-button social-button-large"
+                     data-twitter="lepture"
+                     data-facebook="lepture"
+                     data-weibo="lepture"
+                     data-text="Share your notes with these beautiful social buttons."
+                     data-count="true"
+                     data-url="<%= absoluteUrl %>"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var title       = "<%= title %>";
+    var author      = "<%= author %>";
+    var recordUrl   = "<%= recordUrl %>";
+    var pic         = "<%= pic %>";
+
+    $(function(){
+        var ap = new APlayer({
+            element: document.getElementById('player'),
+            narrow      : false,
+            autoplay    : false,
+            showlrc     : false,
+            music   : {
+                title   : title,
+                author  : author,
+                url     : recordUrl,
+                pic     : pic
+            }
+        });
+
+        ap.init();
+    })
+</script>
+<script type="text/javascript" src="vendors/APlayer/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="vendors/social/dist/widget.js"></script>
+</body>
+</html>
