@@ -1,6 +1,8 @@
 // Example express application adding the parse-server module to expose Parse
 // compatible API routes.
 
+console.log('start...')
+
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var bodyParser = require('body-parser');
@@ -22,7 +24,7 @@ var api = new ParseServer({
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
-console.log('start...')
+
 
 var app = express();
 
