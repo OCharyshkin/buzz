@@ -5,7 +5,7 @@ dependencies:
 deployment:
   staging:
     branch: master
+    commands:
+      - npm start
     heroku:
       appname: buzz-13
-      commands:
-        - npm start
