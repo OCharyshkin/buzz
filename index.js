@@ -29,9 +29,13 @@ app.set('views', './cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'ejs');    // Set the template engine
 app.use(bodyParser.urlencoded({ extended: true }));    // Middleware for reading request body
 
-app.use('', api);
+//app.use('', api);
 
 app.use('/*', function(req, res) {
+
+
+  return res.render("error");
+
   var content_id = req.params[0];
 
   if (!content_id) {
