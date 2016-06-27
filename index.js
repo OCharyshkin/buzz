@@ -22,7 +22,11 @@ var api = new ParseServer({
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
+console.log('start...')
+
 var app = express();
+
+console.log('set express handlers')
 
 // Global app configuration section
 app.set('views', './cloud/views');  // Specify the folder to find templates
