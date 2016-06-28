@@ -54,7 +54,11 @@ app.use('/*', function(req, res) {
 
         res.render("index", params);
       },
-      error : function () {
+      error : function (data, err) {
+        console.log("error: ");
+        console.log(err);
+        console.log("data: ")
+        console.log(data)
         res.render("error");
       }
     });
