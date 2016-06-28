@@ -69,7 +69,7 @@ app.use('/*', function(req, res) {
 
 function setupApp(content_id) {
   return {
-    absoluteUrl : api.serverURL + '/' + content_id
+    absoluteUrl : serverUrl + '/' + content_id
   }
 }
 
