@@ -1,6 +1,6 @@
 {
   "name": "parse-server-buzz",
-  "version": "1.4.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -13,7 +13,6 @@
     "underscore": "1.8.3"
   },
   "scripts": {
-    "heroku-prebuild": "node --version",
     "start": "node index.js",
     "test": "./node_modules/.bin/mocha --require should --reporter spec tests/main.js"
   },
