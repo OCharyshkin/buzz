@@ -15,6 +15,9 @@ var api = new ParseServer({
   databaseURI: databaseUri,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID,
+  javascriptKey: process.env.JAVASCRIPT_KEY,
+  restAPIKey: process.env.REST_API_KEY,
+  clientKey: process.env.CLIENT_KEY,
   masterKey: process.env.MASTER_KEY, //Add your master key here. Keep it secret!
   serverURL: serverUrl + ':' + port  // Don't forget to change to https if needed
 });
@@ -56,9 +59,8 @@ app.use('/*', function(req, res) {
       },
       error : function (data, err) {
         console.log("error: ");
-        console.log(err);
-        console.log("data: ")
-        console.log(data)
+        console.log(JSON.stringify(err));
+
         res.render("error");
       }
     });
