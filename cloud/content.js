@@ -79,7 +79,6 @@ Parse.Cloud.beforeSave("Content", function ( request, response ) {
         if (location) {
             var settings = content.get("settings")
 
-
             if (settings && settings["address"]) {
                 var newACL = new Parse.ACL();
                 newACL.setPublicReadAccess(true);

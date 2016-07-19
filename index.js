@@ -5,6 +5,7 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var bodyParser = require('body-parser');
 var _ = require('underscore');
+var compression = require('compression');
 
 var databaseUri = process.env.DATABASE_URI;
 
@@ -34,6 +35,7 @@ var app = express();
 app.set('views', './cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'ejs');    // Set the template engine
 app.use(bodyParser.urlencoded({ extended: true }));    // Middleware for reading request body
+app.use(compression()); 
 
 app.use('', api);
 
